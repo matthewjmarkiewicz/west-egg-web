@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-cream: #FAF8F4;
+  --color-cream-dark: #F5F0E8;
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-soft: #2C2C2C;
+  --color-gold: #B8960C;
+  --color-gold-light: #C9A84C;
+  --color-warm-gray: #E8E0D0;
+  --color-warm-gray-light: #F0EBE3;
+  --color-navy: #1B2A4A;
+  --color-navy-light: #243460;
+
+  --font-display: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-cormorant), Georgia, "Times New Roman", serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAF8F4;
+  color: #1A1A1A;
+  font-family: var(--font-cormorant), Georgia, "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Section fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.75s ease-out forwards;
+}
+
+.fade-in-up-delay-1 {
+  animation: fadeInUp 0.75s ease-out 0.1s both;
+}
+
+.fade-in-up-delay-2 {
+  animation: fadeInUp 0.75s ease-out 0.2s both;
+}
+
+.fade-in-up-delay-3 {
+  animation: fadeInUp 0.75s ease-out 0.3s both;
+}
+
+/* Small caps utility */
+.small-caps {
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+}
+
+/* Gold rule divider */
+.gold-rule {
+  border-color: #B8960C;
+  opacity: 0.4;
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8E0D0;
+  border-radius: 3px;
 }
