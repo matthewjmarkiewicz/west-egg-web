@@ -55,7 +55,7 @@ const trustSignals = [
 
 export default function TrustSection() {
   return (
-    <section className="py-24 lg:py-32 bg-cream">
+    <section className="py-24 lg:py-32 bg-cream" id="about">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Header */}
         <div className="max-w-2xl mb-16">

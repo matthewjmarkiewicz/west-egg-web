@@ -31,13 +31,13 @@ export default function Footer() {
               Pricing
             </a>
             <a
-              href="#"
+              href="/privacy"
               className="font-body text-sm text-charcoal-soft hover:text-charcoal transition-colors tracking-wide"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="/terms"
               className="font-body text-sm text-charcoal-soft hover:text-charcoal transition-colors tracking-wide"
             >
               Terms
