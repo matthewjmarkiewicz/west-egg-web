@@ -13,7 +13,6 @@
 :root{
   --navy:#1C2E5A;
   --navy-deep:#101e3e;
-  --navy-mid:#243570;
   --gold:#C4A45A;
   --gold-dim:rgba(196,164,90,0.13);
   --gold-border:rgba(196,164,90,0.28);
@@ -24,7 +23,6 @@
   --muted:#7A8090;
   --border:rgba(28,46,90,0.1);
   --border2:rgba(28,46,90,0.18);
-  --success:#2E6E48;
   --serif:'Cormorant Garamond',Georgia,serif;
   --sans:'Jost',system-ui,sans-serif;
 }
@@ -32,155 +30,156 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);background:var(--cream);color:var(--text);line-height:1.6;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:72px;background:rgba(28,46,90,0.96);backdrop-filter:blur(12px);border-bottom:1px solid rgba(196,164,90,0.18)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.nav-logo-mark{width:34px;height:34px;border:1.5px solid var(--gold);border-radius:3px;display:flex;align-items:center;justify-content:center;position:relative}
-.nav-logo-mark::before{content:'';position:absolute;width:16px;height:16px;border-top:1.5px solid var(--gold);border-right:1.5px solid var(--gold);transform:rotate(45deg);top:6px;left:7px}
-.nav-logo-mark::after{content:'';position:absolute;width:6px;height:6px;background:var(--gold);border-radius:50%;bottom:5px;left:12px}
-.nav-logo-text{font-family:var(--serif);font-weight:500;font-size:22px;color:var(--white);letter-spacing:0.06em}
-.nav-links{display:flex;align-items:center;gap:2.5rem}
-.nav-link{font-family:var(--sans);font-size:13px;font-weight:400;color:rgba(255,255,255,0.68);text-decoration:none;letter-spacing:0.08em;text-transform:uppercase;transition:color 0.2s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 6%;height:68px;background:rgba(16,30,62,0.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(196,164,90,0.16)}
+.nav-logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.nav-logo-mark{width:32px;height:32px;border:1.5px solid var(--gold);border-radius:3px;position:relative;flex-shrink:0}
+.nav-logo-mark::before{content:'';position:absolute;width:14px;height:14px;border-top:1.5px solid var(--gold);border-right:1.5px solid var(--gold);transform:rotate(45deg);top:5px;left:6px}
+.nav-logo-mark::after{content:'';position:absolute;width:5px;height:5px;background:var(--gold);border-radius:50%;bottom:5px;left:11px}
+.nav-logo-text{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--white);letter-spacing:0.05em;white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:2rem}
+.nav-link{font-family:var(--sans);font-size:12px;font-weight:400;color:rgba(255,255,255,0.6);text-decoration:none;letter-spacing:0.1em;text-transform:uppercase;transition:color 0.2s}
 .nav-link:hover{color:var(--gold)}
-.btn-portal{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border:none;padding:10px 24px;border-radius:2px;cursor:pointer;text-decoration:none;transition:background 0.2s,opacity 0.2s}
+.btn-portal{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border:none;padding:9px 22px;border-radius:2px;cursor:pointer;text-decoration:none;transition:background 0.2s;white-space:nowrap}
 .btn-portal:hover{background:#d4b46a}
 
 /* HERO */
-.hero{min-height:100vh;background:var(--navy-deep);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:120px 5% 80px}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,90,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,90,0.04) 1px,transparent 1px);background-size:64px 64px;pointer-events:none}
-.hero-glow{position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(ellipse,rgba(196,164,90,0.08) 0%,transparent 65%);pointer-events:none}
-.hero-glow2{position:absolute;bottom:-10%;left:-5%;width:400px;height:400px;background:radial-gradient(ellipse,rgba(28,46,90,0.6) 0%,transparent 70%);pointer-events:none}
-.hero-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;opacity:0;animation:fadeUp 0.8s 0.2s forwards}
-.hero-headline{font-family:var(--serif);font-weight:300;font-size:clamp(52px,7vw,96px);line-height:1.02;color:var(--white);margin-bottom:32px;max-width:820px;opacity:0;animation:fadeUp 0.9s 0.35s forwards}
+.hero{min-height:100vh;background:var(--navy-deep);display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:100px 6% 72px}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,90,0.035) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,90,0.035) 1px,transparent 1px);background-size:72px 72px;pointer-events:none}
+.hero-glow{position:absolute;top:-15%;right:-8%;width:560px;height:560px;background:radial-gradient(ellipse,rgba(196,164,90,0.07) 0%,transparent 65%);pointer-events:none}
+.hero-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.2s forwards}
+.hero-headline{font-family:var(--serif);font-weight:300;font-size:clamp(48px,6.5vw,90px);line-height:1.03;color:var(--white);margin-bottom:28px;max-width:780px;opacity:0;animation:fadeUp 0.9s 0.35s forwards}
 .hero-headline em{font-style:italic;color:var(--gold)}
-.hero-sub{font-family:var(--sans);font-size:17px;font-weight:300;color:rgba(255,255,255,0.58);max-width:520px;line-height:1.75;margin-bottom:52px;opacity:0;animation:fadeUp 0.9s 0.5s forwards}
-.hero-ctas{display:flex;align-items:center;gap:20px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.9s 0.65s forwards}
-.btn-primary{font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border:none;padding:16px 40px;border-radius:2px;cursor:pointer;text-decoration:none;transition:background 0.2s;display:inline-block}
+.hero-sub{font-family:var(--sans);font-size:16px;font-weight:300;color:rgba(255,255,255,0.54);max-width:500px;line-height:1.8;margin-bottom:44px;opacity:0;animation:fadeUp 0.9s 0.5s forwards}
+.hero-ctas{display:flex;align-items:center;gap:16px;flex-wrap:wrap;opacity:0;animation:fadeUp 0.9s 0.65s forwards}
+.btn-primary{font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--navy-deep);background:var(--gold);border:none;padding:14px 36px;border-radius:2px;cursor:pointer;text-decoration:none;transition:background 0.2s;display:inline-block}
 .btn-primary:hover{background:#d4b46a}
-.btn-ghost{font-family:var(--sans);font-size:14px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.72);background:transparent;border:1px solid rgba(196,164,90,0.35);padding:15px 36px;border-radius:2px;cursor:pointer;text-decoration:none;transition:border-color 0.2s,color 0.2s;display:inline-block}
+.btn-ghost{font-family:var(--sans);font-size:13px;font-weight:400;letter-spacing:0.09em;text-transform:uppercase;color:rgba(255,255,255,0.65);background:transparent;border:1px solid rgba(196,164,90,0.32);padding:13px 32px;border-radius:2px;cursor:pointer;text-decoration:none;transition:border-color 0.2s,color 0.2s;display:inline-block}
 .btn-ghost:hover{border-color:var(--gold);color:var(--white)}
-.hero-divider{position:absolute;bottom:0;left:0;right:0;height:100px;background:linear-gradient(to bottom,transparent,var(--cream));pointer-events:none}
-.hero-stats{display:flex;gap:60px;margin-top:80px;padding-top:48px;border-top:1px solid rgba(196,164,90,0.18);opacity:0;animation:fadeUp 0.9s 0.8s forwards;flex-wrap:wrap}
-.hero-stat-num{font-family:var(--serif);font-size:42px;font-weight:300;color:var(--white);line-height:1}
-.hero-stat-label{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:6px}
+.hero-stats{display:flex;gap:48px;margin-top:64px;padding-top:40px;border-top:1px solid rgba(196,164,90,0.16);opacity:0;animation:fadeUp 0.9s 0.8s forwards;flex-wrap:wrap}
+.hero-stat-num{font-family:var(--serif);font-size:38px;font-weight:300;color:var(--white);line-height:1}
+.hero-stat-label{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.36);margin-top:5px}
 
 /* SECTION COMMON */
-section{padding:100px 5%}
-.section-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
-.section-headline{font-family:var(--serif);font-size:clamp(36px,4.5vw,58px);font-weight:300;line-height:1.1;color:var(--text);margin-bottom:20px}
+.section-eyebrow{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.gold-rule{width:44px;height:1px;background:var(--gold);margin-bottom:28px;opacity:0.65}
+.section-headline{font-family:var(--serif);font-size:clamp(34px,4vw,54px);font-weight:300;line-height:1.1;color:var(--text);margin-bottom:16px}
 .section-headline em{font-style:italic;color:var(--navy)}
-.section-sub{font-family:var(--sans);font-size:16px;font-weight:300;color:var(--muted);max-width:520px;line-height:1.75}
+.section-sub{font-family:var(--sans);font-size:15px;font-weight:300;color:var(--muted);max-width:500px;line-height:1.8}
 
 /* FEATURES */
-.features-section{background:var(--cream)}
-.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2px;margin-top:64px;border:1px solid var(--border2);overflow:hidden;border-radius:4px}
-.feature-card{background:var(--white);padding:40px 36px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background 0.25s}
-.feature-card:hover{background:var(--cream2)}
-.feature-card:last-child{border-right:none}
-.feature-icon{width:44px;height:44px;border:1px solid var(--gold-border);background:var(--gold-dim);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-bottom:28px}
-.feature-icon svg{width:20px;height:20px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.feature-title{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--text);margin-bottom:12px}
-.feature-body{font-family:var(--sans);font-size:14px;font-weight:300;color:var(--muted);line-height:1.75}
+.features-section{background:var(--cream);padding:88px 6%}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border:1px solid var(--border2);border-radius:4px;overflow:hidden}
+.feature-card{background:var(--white);padding:36px 32px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);transition:background 0.22s}
+.feature-card:nth-child(3n){border-right:none}
+.feature-card:nth-last-child(-n+3){border-bottom:none}
+.feature-card:hover{background:#fafaf8}
+.feature-icon{width:40px;height:40px;border:1px solid var(--gold-border);background:var(--gold-dim);border-radius:3px;display:flex;align-items:center;justify-content:center;margin-bottom:22px;flex-shrink:0}
+.feature-icon svg{width:18px;height:18px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.feature-title{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--text);margin-bottom:10px}
+.feature-body{font-family:var(--sans);font-size:13.5px;font-weight:300;color:var(--muted);line-height:1.75}
 
-/* CLAIMS / AI HIGHLIGHT */
-.claims-section{background:var(--navy);overflow:hidden;position:relative}
-.claims-bg-lines{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(196,164,90,0.05) 0,rgba(196,164,90,0.05) 1px,transparent 1px,transparent 80px);pointer-events:none}
-.claims-inner{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
-.claims-headline{font-family:var(--serif);font-size:clamp(38px,4.5vw,60px);font-weight:300;color:var(--white);line-height:1.08;margin-bottom:24px}
+/* CLAIMS */
+.claims-section{background:var(--navy);overflow:hidden;position:relative;padding:88px 6%}
+.claims-bg-lines{position:absolute;inset:0;background-image:repeating-linear-gradient(90deg,rgba(196,164,90,0.045) 0,rgba(196,164,90,0.045) 1px,transparent 1px,transparent 88px);pointer-events:none}
+.claims-inner{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;position:relative;z-index:1}
+.claims-headline{font-family:var(--serif);font-size:clamp(36px,4vw,56px);font-weight:300;color:var(--white);line-height:1.08;margin-bottom:20px}
 .claims-headline em{font-style:italic;color:var(--gold)}
-.claims-body{font-family:var(--sans);font-size:15px;font-weight:300;color:rgba(255,255,255,0.56);line-height:1.8;margin-bottom:36px}
-.claims-features{list-style:none;display:flex;flex-direction:column;gap:16px;margin-bottom:44px}
-.claims-features li{display:flex;align-items:flex-start;gap:14px;font-family:var(--sans);font-size:14px;color:rgba(255,255,255,0.75)}
-.claims-features li::before{content:'';flex-shrink:0;width:18px;height:18px;margin-top:1px;border:1px solid var(--gold);border-radius:50%;background:var(--gold-dim)}
-.claims-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,164,90,0.22);border-radius:4px;overflow:hidden}
-.claims-card-header{padding:20px 24px;border-bottom:1px solid rgba(196,164,90,0.15);display:flex;align-items:center;justify-content:space-between}
-.claims-card-title{font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.5)}
-.claims-badge{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:4px 10px;border-radius:2px;background:var(--gold-dim);color:var(--gold);border:1px solid var(--gold-border)}
-.claims-card-body{padding:24px}
-.claims-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.07)}
+.claims-body{font-family:var(--sans);font-size:14.5px;font-weight:300;color:rgba(255,255,255,0.52);line-height:1.8;margin-bottom:28px}
+.claims-features{list-style:none;display:flex;flex-direction:column;gap:13px;margin-bottom:40px}
+.claims-features li{display:flex;align-items:flex-start;gap:12px;font-family:var(--sans);font-size:13.5px;color:rgba(255,255,255,0.68);line-height:1.6}
+.claims-features li::before{content:'';flex-shrink:0;width:16px;height:16px;margin-top:3px;border:1px solid var(--gold);border-radius:50%;background:var(--gold-dim)}
+.claims-card{background:rgba(255,255,255,0.04);border:1px solid rgba(196,164,90,0.2);border-radius:4px;overflow:hidden}
+.claims-card-header{padding:16px 20px;border-bottom:1px solid rgba(196,164,90,0.13);display:flex;align-items:center;justify-content:space-between;gap:12px}
+.claims-card-title{font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.42)}
+.claims-badge{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:3px 9px;border-radius:2px;background:var(--gold-dim);color:var(--gold);border:1px solid var(--gold-border);white-space:nowrap}
+.claims-card-body{padding:20px}
+.claims-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.06);gap:12px}
 .claims-row:last-child{border-bottom:none}
-.claims-row-label{font-family:var(--sans);font-size:13px;color:rgba(255,255,255,0.45)}
-.claims-row-val{font-family:var(--sans);font-size:13px;font-weight:500;color:rgba(255,255,255,0.85)}
-.claims-row-val.status-active{color:#7dd6a7}
+.claims-row-label{font-family:var(--sans);font-size:12.5px;color:rgba(255,255,255,0.42);flex:1;min-width:0}
+.claims-row-val{font-family:var(--sans);font-size:12.5px;font-weight:500;color:rgba(255,255,255,0.82);white-space:nowrap}
+.claims-row-val.status-open{color:#7dd6a7}
 .claims-row-val.status-review{color:var(--gold)}
-.claims-ai-prompt{margin-top:16px;background:rgba(28,46,90,0.6);border:1px solid rgba(196,164,90,0.18);border-radius:3px;padding:14px 16px;display:flex;gap:10px;align-items:flex-start}
-.ai-avatar{width:26px;height:26px;flex-shrink:0;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:12px;color:var(--gold)}
-.ai-text{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,0.55);line-height:1.65}
-.ai-text strong{color:rgba(255,255,255,0.85);font-weight:500}
+.claims-ai-prompt{margin-top:14px;background:rgba(16,30,62,0.65);border:1px solid rgba(196,164,90,0.16);border-radius:3px;padding:13px 15px;display:flex;gap:10px;align-items:flex-start}
+.ai-avatar{width:24px;height:24px;flex-shrink:0;border-radius:50%;background:var(--gold-dim);border:1px solid var(--gold-border);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:11px;color:var(--gold);margin-top:1px}
+.ai-text{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,0.5);line-height:1.65}
+.ai-text strong{color:rgba(255,255,255,0.82);font-weight:500}
+.ai-action{color:var(--gold);cursor:pointer;text-decoration:none}
 
 /* TIERS */
-.tiers-section{background:var(--cream2)}
-.tiers-header{text-align:center;margin-bottom:64px}
-.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;border:1px solid var(--border2);border-radius:4px;overflow:hidden}
-.tier-card{background:var(--white);padding:44px 36px;position:relative}
-.tier-card.featured{background:var(--navy);border:none}
-.tier-tag{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:block}
-.tier-name{font-family:var(--serif);font-size:32px;font-weight:400;color:var(--text);margin-bottom:8px}
+.tiers-section{background:var(--cream2);padding:88px 6%}
+.tiers-header{text-align:center;margin-bottom:56px}
+.tiers-header .gold-rule{margin-left:auto;margin-right:auto}
+.tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border2);border-radius:4px;overflow:hidden}
+.tier-card{background:var(--white);padding:40px 32px;position:relative;border-right:1px solid var(--border)}
+.tier-card:last-child{border-right:none}
+.tier-card.featured{background:var(--navy)}
+.tier-tag{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;display:block}
+.tier-name{font-family:var(--serif);font-size:30px;font-weight:400;color:var(--text);margin-bottom:6px}
 .tier-card.featured .tier-name{color:var(--white)}
-.tier-price{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--muted);margin-bottom:32px}
-.tier-card.featured .tier-price{color:rgba(255,255,255,0.5)}
-.tier-divider{height:1px;background:var(--border);margin-bottom:32px}
-.tier-card.featured .tier-divider{background:rgba(196,164,90,0.2)}
-.tier-features{list-style:none;display:flex;flex-direction:column;gap:14px}
-.tier-features li{font-family:var(--sans);font-size:14px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
-.tier-card.featured .tier-features li{color:rgba(255,255,255,0.65)}
-.tier-features li::before{content:'';flex-shrink:0;width:16px;height:16px;margin-top:2px;border-radius:50%;background:var(--border);border:1px solid var(--border2)}
-.tier-card.featured .tier-features li::before{background:var(--gold-dim);border-color:var(--gold-border)}
-.tier-features li.included::before{background:rgba(46,110,72,0.15);border-color:rgba(46,110,72,0.35)}
-.tier-card.featured .tier-features li.included::before{background:rgba(196,164,90,0.25);border-color:var(--gold)}
-.tier-cta{display:block;margin-top:40px;text-align:center;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:0.09em;text-transform:uppercase;text-decoration:none;padding:13px 24px;border-radius:2px;transition:all 0.2s;border:1px solid var(--border2);color:var(--navy)}
+.tier-price{font-family:var(--sans);font-size:15px;font-weight:300;color:var(--muted);margin-bottom:28px;letter-spacing:0.02em}
+.tier-card.featured .tier-price{color:rgba(255,255,255,0.42)}
+.tier-divider{height:1px;background:var(--border);margin-bottom:24px}
+.tier-card.featured .tier-divider{background:rgba(196,164,90,0.18)}
+.tier-features{list-style:none;display:flex;flex-direction:column;gap:11px}
+.tier-features li{font-family:var(--sans);font-size:13.5px;color:var(--muted);display:flex;gap:9px;align-items:flex-start;line-height:1.5}
+.tier-card.featured .tier-features li{color:rgba(255,255,255,0.58)}
+.check{flex-shrink:0;width:15px;height:15px;margin-top:1px;border-radius:50%;background:rgba(46,110,72,0.12);border:1px solid rgba(46,110,72,0.3);display:inline-block}
+.tier-card.featured .check{background:rgba(196,164,90,0.18);border-color:rgba(196,164,90,0.55)}
+.dash{flex-shrink:0;width:15px;height:15px;margin-top:1px;border-radius:50%;background:var(--border);border:1px solid var(--border2);display:inline-block}
+.tier-cta{display:block;margin-top:36px;text-align:center;font-family:var(--sans);font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;padding:12px 20px;border-radius:2px;transition:all 0.2s;border:1px solid var(--border2);color:var(--navy)}
 .tier-cta:hover{background:var(--navy);color:var(--white);border-color:var(--navy)}
 .tier-card.featured .tier-cta{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
-.tier-card.featured .tier-cta:hover{background:#d4b46a}
+.tier-card.featured .tier-cta:hover{background:#d4b46a;border-color:#d4b46a}
 
 /* SECURITY */
-.security-section{background:var(--cream);display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.security-badges{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.security-badge{background:var(--white);border:1px solid var(--border2);border-radius:4px;padding:24px;display:flex;flex-direction:column;gap:10px}
-.security-badge-icon{width:36px;height:36px;border:1px solid var(--gold-border);background:var(--gold-dim);border-radius:3px;display:flex;align-items:center;justify-content:center}
-.security-badge-icon svg{width:16px;height:16px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.security-badge-title{font-family:var(--sans);font-size:14px;font-weight:500;color:var(--text)}
-.security-badge-sub{font-family:var(--sans);font-size:12px;color:var(--muted)}
+.security-section{background:var(--cream);padding:88px 6%;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.security-badges{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.security-badge{background:var(--white);border:1px solid var(--border2);border-radius:4px;padding:22px 20px;display:flex;flex-direction:column;gap:9px;transition:border-color 0.2s}
+.security-badge:hover{border-color:var(--gold-border)}
+.security-badge-icon{width:34px;height:34px;border:1px solid var(--gold-border);background:var(--gold-dim);border-radius:3px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.security-badge-icon svg{width:15px;height:15px;stroke:var(--gold);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.security-badge-title{font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--text)}
+.security-badge-sub{font-family:var(--sans);font-size:12px;color:var(--muted);line-height:1.55}
 
 /* FINAL CTA */
-.final-cta{background:var(--navy-deep);text-align:center;padding:120px 5%;position:relative;overflow:hidden}
-.final-cta-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,90,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,90,0.03) 1px,transparent 1px);background-size:48px 48px}
+.final-cta{background:var(--navy-deep);text-align:center;padding:108px 6%;position:relative;overflow:hidden}
+.final-cta-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(196,164,90,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(196,164,90,0.03) 1px,transparent 1px);background-size:56px 56px}
 .final-cta-inner{position:relative;z-index:1}
-.final-cta-headline{font-family:var(--serif);font-size:clamp(44px,5.5vw,76px);font-weight:300;color:var(--white);margin-bottom:24px;line-height:1.05}
+.final-cta-headline{font-family:var(--serif);font-size:clamp(40px,5vw,70px);font-weight:300;color:var(--white);margin-bottom:20px;line-height:1.06}
 .final-cta-headline em{font-style:italic;color:var(--gold)}
-.final-cta-sub{font-family:var(--sans);font-size:16px;font-weight:300;color:rgba(255,255,255,0.45);margin-bottom:48px}
-.final-cta-line{width:60px;height:1px;background:var(--gold);margin:0 auto 48px;opacity:0.5}
+.final-cta-line{width:48px;height:1px;background:var(--gold);margin:0 auto 36px;opacity:0.5}
+.final-cta-sub{font-family:var(--sans);font-size:15px;font-weight:300;color:rgba(255,255,255,0.4);margin-bottom:40px;letter-spacing:0.02em}
 
 /* FOOTER */
-footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);padding:40px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:gap}
-.footer-logo{font-family:var(--serif);font-size:20px;font-weight:500;color:rgba(255,255,255,0.6);letter-spacing:0.06em}
-.footer-copy{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,0.28);letter-spacing:0.06em}
-.footer-links{display:flex;gap:28px}
-.footer-link{font-family:var(--sans);font-size:12px;color:rgba(255,255,255,0.35);text-decoration:none;letter-spacing:0.06em;transition:color 0.2s}
+footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.1);padding:32px 6%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+.footer-logo{font-family:var(--serif);font-size:18px;font-weight:500;color:rgba(255,255,255,0.52);letter-spacing:0.05em}
+.footer-links{display:flex;gap:24px;flex-wrap:wrap}
+.footer-link{font-family:var(--sans);font-size:11.5px;color:rgba(255,255,255,0.3);text-decoration:none;letter-spacing:0.07em;transition:color 0.2s}
 .footer-link:hover{color:var(--gold)}
+.footer-copy{font-family:var(--sans);font-size:11px;color:rgba(255,255,255,0.22);letter-spacing:0.05em}
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
-/* DIVIDER LINE */
-.gold-rule{width:48px;height:1px;background:var(--gold);margin-bottom:32px;opacity:0.7}
-
-/* RESPONSIVE */
-@media(max-width:900px){
+@media(max-width:960px){
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .feature-card:nth-child(3n){border-right:1px solid var(--border)}
+  .feature-card:nth-child(2n){border-right:none}
   .claims-inner,.security-section{grid-template-columns:1fr}
   .tiers-grid{grid-template-columns:1fr}
+  .tier-card{border-right:none;border-bottom:1px solid var(--border)}
+  .tier-card:last-child{border-bottom:none}
   .nav-links{display:none}
-  .hero-stats{gap:32px}
-  .hero-headline{font-size:clamp(40px,10vw,64px)}
 }
 @media(max-width:600px){
   .features-grid{grid-template-columns:1fr}
   .security-badges{grid-template-columns:1fr}
+  .hero-stats{gap:28px}
+  nav,.hero,.features-section,.claims-section,.tiers-section,.security-section,.final-cta,footer{padding-left:4%;padding-right:4%}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <a href="/" class="nav-logo">
     <div class="nav-logo-mark"></div>
@@ -195,100 +194,64 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
   <a href="https://aegis-web-production-73da.up.railway.app" class="btn-portal">Client Portal →</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-  <div class="hero-glow2"></div>
-
   <div class="hero-eyebrow">West Egg Wealth · Powered by Aegis</div>
-
-  <h1 class="hero-headline">
-    The command layer for<br />
-    <em>complex wealth.</em>
-  </h1>
-
+  <h1 class="hero-headline">The command layer for<br /><em>complex wealth.</em></h1>
   <p class="hero-sub">West Egg Wealth delivers institutional-grade protection through Aegis — our proprietary platform unifying portfolio oversight, insurance coverage management, and AI-powered claims intelligence for the world's most sophisticated family offices.</p>
-
   <div class="hero-ctas">
     <a href="https://aegis-web-production-73da.up.railway.app" class="btn-primary">Access Client Portal</a>
     <a href="#features" class="btn-ghost">Explore the Platform</a>
   </div>
-
   <div class="hero-stats">
-    <div>
-      <div class="hero-stat-num">360°</div>
-      <div class="hero-stat-label">Coverage Visibility</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">4</div>
-      <div class="hero-stat-label">AI Claim Tools</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">3</div>
-      <div class="hero-stat-label">Service Tiers</div>
-    </div>
-    <div>
-      <div class="hero-stat-num">SOC 2</div>
-      <div class="hero-stat-label">Type II Compliant</div>
-    </div>
+    <div><div class="hero-stat-num">360°</div><div class="hero-stat-label">Coverage Visibility</div></div>
+    <div><div class="hero-stat-num">4</div><div class="hero-stat-label">AI Claim Tools</div></div>
+    <div><div class="hero-stat-num">3</div><div class="hero-stat-label">Service Tiers</div></div>
+    <div><div class="hero-stat-num">SOC 2</div><div class="hero-stat-label">Type II Compliant</div></div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="features-section" id="features">
   <div class="section-eyebrow">The Aegis Platform</div>
   <div class="gold-rule"></div>
   <h2 class="section-headline">Every dimension of<br /><em>wealth, protected.</em></h2>
-  <p class="section-sub">West Egg Wealth clients access Aegis — purpose-built for families managing complex, multi-entity portfolios across real estate, private equity, fine art, and beyond.</p>
+  <p class="section-sub">Purpose-built for families managing complex, multi-entity portfolios across real estate, private equity, fine art, and beyond.</p>
 
   <div class="features-grid">
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-      </div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
       <h3 class="feature-title">Portfolio Command Center</h3>
-      <p class="feature-body">Consolidated net worth panel spanning every asset class. Real-time valuation, coverage gap analysis, and premium drill-down by carrier — all on a single institutional-grade dashboard.</p>
+      <p class="feature-body">Your complete financial picture — every asset class, every entity, every valuation — consolidated into a single dashboard. Real estate, private equity, art, and liquid holdings shown alongside the insurance coverage tied to each.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h3 class="feature-title">Insurance Coverage Intelligence</h3>
-      <p class="feature-body">Map every policy to every asset. Identify uninsured or underinsured exposures before they become catastrophic. Track renewals, limits, and exclusions across all carriers in one view.</p>
+      <p class="feature-body">See every policy mapped to the asset it protects. Identify gaps in coverage, upcoming renewals, and mismatched limits before they become costly exposures — across all carriers and all properties in one view.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      </div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
       <h3 class="feature-title">Proactive Alert Engine</h3>
-      <p class="feature-body">Configurable severity tiers surface critical gaps, expiring coverage, and policy anomalies. Your family never faces an unexamined risk because it slipped through the cracks.</p>
+      <p class="feature-body">Critical risks surface themselves — expiring coverage, underinsured assets, and policy anomalies are flagged before they require a call to your broker. Your advisors stay ahead of exposure, not behind it.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-      </div>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
       <h3 class="feature-title">Secure Document Vault</h3>
-      <p class="feature-body">All policies, deeds, appraisals, and correspondence in one encrypted repository — linked directly to the assets and entities they protect. Zero ambiguity when it matters most.</p>
+      <p class="feature-body">Every policy declaration, property deed, appraisal, and insurer correspondence in one encrypted repository — organized by asset and entity. When a claim arises, nothing is missing and nothing is scrambled for.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-      </div>
-      <h3 class="feature-title">Granular Role-Based Access</h3>
-      <p class="feature-body">From PRINCIPAL beneficiaries to institutional FIRM_ADMINs, every role sees exactly what they need — nothing more. Multi-entity scoping with tenant-isolated data across all tiers.</p>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <h3 class="feature-title">Tailored Access for Every Stakeholder</h3>
+      <p class="feature-body">Family members, trustees, advisors, and counsel each see exactly what's relevant to their role — and nothing more. Beneficiaries review their holdings; advisors manage the full picture. Confidentiality is built into the architecture.</p>
     </div>
     <div class="feature-card">
-      <div class="feature-icon">
-        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-      </div>
-      <h3 class="feature-title">Real-Time Analytics</h3>
-      <p class="feature-body">Premium spend by carrier, coverage-to-asset ratios, claim velocity, and resolution timelines. Executive-grade reporting designed for quarterly family council presentations.</p>
+      <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+      <h3 class="feature-title">Executive Reporting</h3>
+      <p class="feature-body">Premium spend by carrier, coverage-to-asset ratios, claim velocity, and settlement timelines — presented in a format ready for the family council, the investment committee, or the annual review with your wealth manager.</p>
     </div>
   </div>
 </section>
 
-<!-- CLAIMS / AI -->
 <section class="claims-section" id="claims">
   <div class="claims-bg-lines"></div>
   <div class="claims-inner">
@@ -296,16 +259,15 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
       <div class="section-eyebrow" style="color:var(--gold)">Claims Intelligence</div>
       <div class="gold-rule"></div>
       <h2 class="claims-headline">AI that works as hard<br />as your <em>advisors.</em></h2>
-      <p class="claims-body">Exclusive to Private and Institutional plan holders, West Egg Wealth's Aegis platform turns complex claims into structured, defensible cases in minutes, not weeks.</p>
+      <p class="claims-body">Exclusive to Private and Institutional clients, Aegis AI turns complex loss events into structured, insurer-ready cases — in hours, not weeks. Less time coordinating. More time recovering.</p>
       <ul class="claims-features">
-        <li>Narrative drafting: converts loss documentation into insurer-ready claim summaries</li>
-        <li>Coverage review: surfaces applicable policies, sublimits, and exclusion gaps</li>
-        <li>Correspondence drafting: professional letters to carriers and counsel on demand</li>
-        <li>Settlement analysis: evaluates proposed terms against precedent and policy language</li>
+        <li><strong style="color:rgba(255,255,255,0.85);font-weight:500">Claim narrative drafting</strong>&ensp;—&ensp;converts your documentation into a coherent, insurer-ready summary</li>
+        <li><strong style="color:rgba(255,255,255,0.85);font-weight:500">Coverage review</strong>&ensp;—&ensp;surfaces every applicable policy, sublimit, and potential exclusion gap</li>
+        <li><strong style="color:rgba(255,255,255,0.85);font-weight:500">Correspondence drafting</strong>&ensp;—&ensp;professional letters to carriers, adjusters, and counsel on demand</li>
+        <li><strong style="color:rgba(255,255,255,0.85);font-weight:500">Settlement analysis</strong>&ensp;—&ensp;evaluates proposed terms against your policy language and comparable precedents</li>
       </ul>
       <a href="https://aegis-web-production-73da.up.railway.app" class="btn-primary">Access Claims Portal</a>
     </div>
-
     <div>
       <div class="claims-card">
         <div class="claims-card-header">
@@ -313,27 +275,13 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
           <span class="claims-badge">Live Preview</span>
         </div>
         <div class="claims-card-body">
-          <div class="claims-row">
-            <span class="claims-row-label">Greenwich Estate — Water Damage</span>
-            <span class="claims-row-val status-review">Under Review</span>
-          </div>
-          <div class="claims-row">
-            <span class="claims-row-label">Lancia Stratos — Collision</span>
-            <span class="claims-row-val status-active">Settlement Pending</span>
-          </div>
-          <div class="claims-row">
-            <span class="claims-row-label">Picasso — Theft / Transit</span>
-            <span class="claims-row-val status-review">Documentation</span>
-          </div>
-          <div class="claims-row">
-            <span class="claims-row-label">Estimated Recovery Total</span>
-            <span class="claims-row-val" style="color:var(--gold);font-family:var(--serif);font-size:16px">$2,340,000</span>
-          </div>
+          <div class="claims-row"><span class="claims-row-label">Greenwich Estate — Water Damage</span><span class="claims-row-val status-review">Under Review</span></div>
+          <div class="claims-row"><span class="claims-row-label">Lancia Stratos — Collision</span><span class="claims-row-val status-open">Settlement Pending</span></div>
+          <div class="claims-row"><span class="claims-row-label">Picasso — Theft / Transit</span><span class="claims-row-val status-review">Documentation</span></div>
+          <div class="claims-row"><span class="claims-row-label">Estimated Recovery Total</span><span class="claims-row-val" style="color:var(--gold);font-family:var(--serif);font-size:15px">$2,340,000</span></div>
           <div class="claims-ai-prompt">
             <div class="ai-avatar">A</div>
-            <div class="ai-text">
-              <strong>Aegis AI</strong> — I've reviewed the Greenwich claim. The homeowner policy sublimit for water damage is $500K but the Umbrella may extend to $1.2M. Recommend filing supplemental documentation before the 45-day deadline. <span style="color:var(--gold);cursor:pointer">Draft letter →</span>
-            </div>
+            <div class="ai-text"><strong>Aegis AI</strong> — I've reviewed the Greenwich claim. Your homeowner policy caps water damage at $500K, but your Umbrella policy may extend coverage to $1.2M. I recommend filing supplemental documentation before the 45-day deadline. <a href="https://aegis-web-production-73da.up.railway.app" class="ai-action">Draft letter →</a></div>
           </div>
         </div>
       </div>
@@ -341,14 +289,12 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
   </div>
 </section>
 
-<!-- TIERS -->
 <section class="tiers-section" id="tiers">
   <div class="tiers-header">
-    <div class="section-eyebrow" style="text-align:center">Service Tiers</div>
-    <div class="gold-rule" style="margin:20px auto 20px"></div>
+    <div class="section-eyebrow">Service Tiers</div>
+    <div class="gold-rule"></div>
     <h2 class="section-headline" style="text-align:center">Scaled to the<br /><em>complexity of your family.</em></h2>
   </div>
-
   <div class="tiers-grid">
     <div class="tier-card">
       <span class="tier-tag">Foundation</span>
@@ -356,97 +302,85 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
       <p class="tier-price">$2,500 / month</p>
       <div class="tier-divider"></div>
       <ul class="tier-features">
-        <li class="included">Portfolio & asset registry</li>
-        <li class="included">Policy management & tracking</li>
-        <li class="included">Coverage gap visualization</li>
-        <li class="included">Secure document vault</li>
-        <li class="included">Alert engine (5 active)</li>
-        <li>AI claims intelligence</li>
-        <li>Correspondence drafting</li>
-        <li>Multi-entity consolidation</li>
+        <li><span class="check"></span>Portfolio &amp; asset registry</li>
+        <li><span class="check"></span>Policy management &amp; tracking</li>
+        <li><span class="check"></span>Coverage gap visualization</li>
+        <li><span class="check"></span>Secure document vault</li>
+        <li><span class="check"></span>Proactive alert engine</li>
+        <li><span class="dash"></span>AI claims intelligence</li>
+        <li><span class="dash"></span>Correspondence drafting</li>
+        <li><span class="dash"></span>Multi-entity consolidation</li>
       </ul>
       <a href="https://aegis-web-production-73da.up.railway.app" class="tier-cta">Access Portal</a>
     </div>
-
     <div class="tier-card featured">
       <span class="tier-tag">Most Popular</span>
-      <h3 class="tier-name" style="color:#fff">Private</h3>
+      <h3 class="tier-name">Private</h3>
       <p class="tier-price">$6,500 / month</p>
       <div class="tier-divider"></div>
       <ul class="tier-features">
-        <li class="included">Everything in Foundation</li>
-        <li class="included">AI claims intelligence</li>
-        <li class="included">Narrative &amp; letter drafting</li>
-        <li class="included">Settlement analysis</li>
-        <li class="included">Coverage review AI</li>
-        <li class="included">Unlimited alerts</li>
-        <li class="included">Priority support</li>
-        <li>Multi-entity rollup analytics</li>
+        <li><span class="check"></span>Everything in Foundation</li>
+        <li><span class="check"></span>AI claims intelligence</li>
+        <li><span class="check"></span>Narrative &amp; letter drafting</li>
+        <li><span class="check"></span>Settlement analysis</li>
+        <li><span class="check"></span>Coverage review AI</li>
+        <li><span class="check"></span>Unlimited alerts</li>
+        <li><span class="check"></span>Priority advisor support</li>
+        <li><span class="dash"></span>Multi-entity consolidated view</li>
       </ul>
       <a href="https://aegis-web-production-73da.up.railway.app" class="tier-cta">Access Portal</a>
     </div>
-
     <div class="tier-card">
       <span class="tier-tag">Enterprise</span>
       <h3 class="tier-name">Institutional</h3>
       <p class="tier-price">Custom pricing</p>
       <div class="tier-divider"></div>
       <ul class="tier-features">
-        <li class="included">Everything in Private</li>
-        <li class="included">Multi-entity rollup & analytics</li>
-        <li class="included">Custom RBAC hierarchy</li>
-        <li class="included">Dedicated client success</li>
-        <li class="included">SLA guarantee</li>
-        <li class="included">SOC 2 Type II audit access</li>
-        <li class="included">API & data integrations</li>
-        <li class="included">White-glove onboarding</li>
+        <li><span class="check"></span>Everything in Private</li>
+        <li><span class="check"></span>Multi-entity consolidated view</li>
+        <li><span class="check"></span>Custom access hierarchy</li>
+        <li><span class="check"></span>Dedicated client success team</li>
+        <li><span class="check"></span>Uptime SLA guarantee</li>
+        <li><span class="check"></span>SOC 2 Type II audit access</li>
+        <li><span class="check"></span>Data &amp; advisor integrations</li>
+        <li><span class="check"></span>White-glove onboarding</li>
       </ul>
-      <a href="mailto:institutional@aegiswealth.com" class="tier-cta">Contact Us</a>
+      <a href="mailto:institutional@westeggwealth.com" class="tier-cta">Contact Us</a>
     </div>
   </div>
 </section>
 
-<!-- SECURITY -->
 <section class="security-section" id="security">
   <div>
-    <div class="section-eyebrow">Security & Compliance</div>
+    <div class="section-eyebrow">Security &amp; Compliance</div>
     <div class="gold-rule"></div>
-    <h2 class="section-headline">Institutional-grade<br /><em>infrastructure.</em></h2>
-    <p class="section-sub">West Egg Wealth's Aegis platform was architected from day one for the security requirements of family offices managing nine-figure wealth. Every tenant is cryptographically isolated. Every access event is logged.</p>
+    <h2 class="section-headline">Built for families who<br />require <em>absolute discretion.</em></h2>
+    <p class="section-sub">West Egg Wealth's Aegis platform was designed from the ground up for the confidentiality requirements of families managing nine-figure wealth. Each client operates in a fully private environment — completely isolated from every other family office on the platform.</p>
   </div>
   <div class="security-badges">
     <div class="security-badge">
-      <div class="security-badge-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      </div>
+      <div class="security-badge-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <div class="security-badge-title">SOC 2 Type II</div>
-      <div class="security-badge-sub">Independent audit in progress (Month 5–6)</div>
+      <div class="security-badge-sub">Independent third-party security audit, in progress</div>
     </div>
     <div class="security-badge">
-      <div class="security-badge-icon">
-        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-      </div>
-      <div class="security-badge-title">Tenant Isolation</div>
-      <div class="security-badge-sub">Every query scoped by verified JWT tenant_id</div>
+      <div class="security-badge-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+      <div class="security-badge-title">Private Client Environments</div>
+      <div class="security-badge-sub">Your data is completely isolated — no cross-family access, ever</div>
     </div>
     <div class="security-badge">
-      <div class="security-badge-icon">
-        <svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-      </div>
-      <div class="security-badge-title">RBAC Controls</div>
-      <div class="security-badge-sub">Six-tier role hierarchy, principal scoping</div>
+      <div class="security-badge-icon"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+      <div class="security-badge-title">Structured Access Controls</div>
+      <div class="security-badge-sub">Distinct, confidential views for family members, trustees, and advisors</div>
     </div>
     <div class="security-badge">
-      <div class="security-badge-icon">
-        <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-      </div>
-      <div class="security-badge-title">Encrypted at Rest</div>
-      <div class="security-badge-sub">PostgreSQL with AES-256 storage encryption</div>
+      <div class="security-badge-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+      <div class="security-badge-title">Bank-Grade Encryption</div>
+      <div class="security-badge-sub">All documents and data secured with AES-256 encryption at rest and in transit</div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
 <section class="final-cta">
   <div class="final-cta-bg"></div>
   <div class="final-cta-inner">
@@ -457,8 +391,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer style="background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);padding:40px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px">
+<footer>
   <span class="footer-logo">West Egg Wealth</span>
   <div class="footer-links">
     <a href="#" class="footer-link">Privacy</a>
@@ -466,7 +399,7 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(196,164,90,0.12);pa
     <a href="mailto:support@westeggwealth.com" class="footer-link">Contact</a>
     <a href="https://aegis-web-production-73da.up.railway.app" class="footer-link">Aegis Portal →</a>
   </div>
-  <span class="footer-copy">© 2024 West Egg Wealth. All rights reserved.</span>
+  <span class="footer-copy">© 2025 West Egg Wealth. All rights reserved.</span>
 </footer>
 
 <script>
@@ -476,20 +409,14 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'})}
   });
 });
-
 const obs=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.style.opacity='1';
-      entry.target.style.transform='translateY(0)';
-    }
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}
   });
-},{threshold:0.1});
-
-document.querySelectorAll('.feature-card,.tier-card,.security-badge,.claims-card').forEach(el=>{
-  el.style.opacity='0';
-  el.style.transform='translateY(18px)';
-  el.style.transition='opacity 0.55s ease, transform 0.55s ease';
+},{threshold:0.08});
+document.querySelectorAll('.feature-card,.tier-card,.security-badge').forEach(el=>{
+  el.style.opacity='0';el.style.transform='translateY(14px)';
+  el.style.transition='opacity 0.5s ease,transform 0.5s ease';
   obs.observe(el);
 });
 </script>
